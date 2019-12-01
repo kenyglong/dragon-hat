@@ -15,6 +15,13 @@
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
+    <plugin>    
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+            <source>1.8</source>
+            <target>1.8</target>
+        </configuration>
+    </plugin>
 	  <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
@@ -23,9 +30,9 @@
         	<transformers>
         	   <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                   <manifestEntries>
-                    <Main-Class>com.dragonhat.keyboard.mapper.AppRunner</Main-Class>
-                    <X-Compile-Source-JDK>${maven.compile.source}</X-Compile-Source-JDK>
-                    <X-Compile-Target-JDK>${maven.compile.target}</X-Compile-Target-JDK>
+                    <Main-Class>com.dragonhat.AppRunner</Main-Class>
+                    <X-Compile-Source-JDK>1.8</X-Compile-Source-JDK>
+                    <X-Compile-Target-JDK>1.8</X-Compile-Target-JDK>
                   </manifestEntries>
         		</transformer>
         	</transformers>
